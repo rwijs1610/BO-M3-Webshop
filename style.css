@@ -1,0 +1,156 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    font-size: 10px;
+}
+
+body {
+    font-family: "Quicksand", sans-serif;   
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr auto auto;
+}
+
+.header {
+    background-color: #655560;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    grid-area: auto / 1 / auto / 5;
+}
+
+.header-nav {
+    display: flex;
+    gap: 2rem;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+    height: 5rem;
+}
+
+.header-nav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 1.4rem 1.6rem;
+    text-decoration: none;
+}
+
+.header-nav a:hover {
+    background-color: #111111;
+}
+
+.cta {
+    background-color: #C4CAD0;
+    text-align: center;
+    border-color: black;
+    border-width: 0.2rem;
+    border-style: solid;
+    grid-area: auto / 1 / auto / 5;
+}
+
+.cta-img {
+    width: 100%;
+    height: 100%;
+    filter: blur(5px);
+}
+
+.cta-item {
+    position: absolute;
+    top: 0;
+    background-color: #655560;
+    border: 0.2rem solid black;
+    padding: 2rem;
+    height: 20rem;
+    width: 50%;
+    margin: 25%;
+    font-size: large;
+    display: flex;
+}
+
+.cta-button {
+    display: flex;
+    gap: 2rem;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+    height: 5rem;
+
+}
+
+.cta-button a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 1.4rem 1.6rem;
+    text-decoration: none;
+}
+
+.cta-button a:hover {
+    background-color: #111111;
+}
+
+.cta-item-text {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cta-item-img {
+    width:auto;
+    height: auto;
+}
+
+.product-section {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    height: 20rem;
+    width: 100%;
+    background-color: #C4CAD0;
+    height: auto;
+}
+
+.product-section h2{
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: large;
+}
+
+.product-section img {
+    width: 100%;
+    height: 44.8rem;
+}
+
+.product-section div{
+    background-color: #e0e4e7;
+    height: auto;
+    width: 100%;
+}   
+
+footer {
+    background-color: #655560;
+    color: white;
+    text-align: center;
+    font-size: 1.4rem;
+    padding: 1rem;
+    grid-area: auto / 1 / auto / 5;
+}
+
+footer a {
+    color: white;
+    text-decoration: underline;
+}
