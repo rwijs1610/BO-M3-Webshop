@@ -21,8 +21,9 @@ body {
     text-align: center;
     padding: 2rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     grid-area: auto / 1 / auto / 5;
+    gap: 20%;
 }
 
 .header-nav {
@@ -56,6 +57,7 @@ body {
     border-width: 0.2rem;
     border-style: solid;
     grid-area: auto / 1 / auto / 5;
+    
 }
 
 .cta-img {
@@ -153,4 +155,32 @@ footer {
 footer a {
     color: white;
     text-decoration: underline;
+}
+
+@media screen and (max-width: 1024px) {
+    body {
+        grid-template-columns: repeat(1fr, 4);
+        grid-template-rows: auto auto auto auto;
+    }
+
+    .cta {
+        font-size: 50%;
+    }
+
+    .header-nav {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .cta-item .cta-img {
+        width: 80%;
+        margin: 10% 10%;
+        grid-area: auto / 1 / auto / 4;
+        font-size: 50%;
+    }
+
+    .product-section {
+        height: auto;
+    }
+    
 }
