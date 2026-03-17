@@ -6,15 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>landingspage</title>
     <link rel="stylesheet" href="style.css">
+    <script src="filter.js" defer></script>
 </head>
 
 <body>
     <header class="header">
         <img src="img/logo.png" alt="logo" class="header-img">
         <nav class="header-nav">
-            <a href="landingspage.html">Home</a>
-            <a href="html/products.html">products</a>
-            <a href="html/card.html">card</a>
+            <a href="landingspage.html" class="header-nav-button">Home</a>
+            <a href="html/products.html" class="header-nav-button">products</a>
+            <a href="html/card.html" class="header-nav-button">card</a>
         </nav>
     </header>
     <article class="cta">
@@ -29,29 +30,35 @@
             </div>
         </section>
     </article>
-    <section class="product-section nmbr1" href="html/products.html">
-        <div>
-            <img src="img/white-T-print.jpg" alt="white T-shirt" href="html/products.html">
-            <h2>White T-Shirt with Print</h2>
-        </div>
-    </section>
-    <section class="product-section nmbr2">
-        <div>
-        <img src="img/black-T.jpg" alt="black T-shirt">
-        <h2>Black T-Shirt</h2>
-        </div>
-    </section>
-    <section class="product-section nmbr3">
-        <div>
-        <img src="img/gray-pants.jpg" alt="gray pants">
-        <h2>Gray Pants</h2>
-        </div>
-    </section>
-    <section class="product-section nmbr4">
-        <div>
-        <img src="img/black-hoodie-print.jpg" alt="black hoodie with print">
-        <h2>Black Hoodie with Print</h2>
-        </div>
+    <section class="product-section" href="html/products.html">
+        <div class="filters">
+            <button onclick="filterProducten('Hoodies')" class="filter-button">Hoodies</button>
+            <button onclick="filterProducten('T-Shirts')" class="filter-button">T-Shirts</button>
+            <button onclick="filterProducten('Pants')" class="filter-button">Pants</button>
+            <button onclick="filterProducten('alles')" class="filter-button">alles</button>
+        </div>  
+        <ul class="product-list">
+            <li class="product" data-categorie="Hoodies">
+                <div><img src="img/black-hoodie-print.jpg" alt="black hoodie with print" class="product-img">
+                    <h2 class="product-title">Black Hoodie with Print</h2>
+                </div>
+            </li>
+            <li class="product" data-categorie="T-Shirts">
+                <div><img src="img/white-T-print.jpg" alt="white T-shirt with print" class="product-img">
+                    <h2 class="product-title">White T-Shirt with Print</h2>
+                </div>
+            </li>
+            <li class="product" data-categorie="T-Shirts">
+                <div><img src="img/black-T.jpg" alt="black T-shirt" class="product-img">
+                    <h2 class="product-title">Black T-Shirt</h2>
+                </div>
+            </li>
+            <li class="product" data-categorie="Pants">
+                <div><img src="img/gray-pants.jpg" alt="gray pants" class="product-img">
+                    <h2 class="product-title">Gray Pants</h2>
+                </div>
+            </li>
+        </ul>
     </section>
     <footer>
         2026 by <a href="mailto:rwijs@ma-web.nl">Rens Wijs</a>.
