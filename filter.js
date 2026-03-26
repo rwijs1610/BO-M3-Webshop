@@ -10,3 +10,21 @@ function filterProducten(categorie) {
         }
     });
 }
+
+const zoekbalk = document.getElementById('zoek');
+
+zoekbalk.addEventListener('input', function() {
+    console.log('Zoekterm:', zoekbalk.value);
+    const zoekterm = zoekbalk.value.toLowerCase();
+    const producten = document.querySelectorAll('.product');
+
+    producten.forEach(function (product) {
+        const naam = product.querySelector('.product-title').textContent.toLowerCase();
+        if (naam.includes(zoekterm)) {
+            product.style.display = 'block';
+            product.style.gridTemplateColumns = 'repeat(auto-fit, minmax(200px, 1fr))';
+        } else {
+            product.style.display = 'none';
+        }
+    });
+});

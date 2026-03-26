@@ -172,8 +172,28 @@ body {
 .product-title {
     text-align: center;
     margin-bottom: 2rem;
-    font-size: large;       
+    font-size: large;
 }
+
+/* pruduct page  */
+
+.product-front {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto ;
+    gap: 2rem;
+    padding: 2rem;
+    height: auto;
+    width: 100%;
+    background-color: #C4CAD0;
+    grid-area: auto / 1 / auto / 5;
+}
+
+.product-hero-img {
+    filter: blur(3px);
+    width: 100vw;
+    height: auto;
+}   
 
 
 footer {
