@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>card</title>
     <link rel="stylesheet" href="../style.css">
+    <script src="../main.js" defer></script>
+    <script src="../card.js" defer></script>
 </head>
 
 <body>
@@ -17,9 +19,21 @@
             <a href="card.html" class="header-nav-button">card</a>
         </nav>
     </header>
-    card
+    <main class="card-main">
+        <table class="cart-product">
+            <tbody id="products">
+                <tr class="card-table-tr">
+                    <th class="card-table-item-th">Item</th>
+                    <th>Aantal</th>
+                    <th>Prijs</th>
+                    <th>subtotaal</th>
+                </tr>
+            </tbody>
+        </table>
+        <button onclick="deleteCard()" class="card-btn">🗑️</button>
+    </main>
     <footer>
-        2026 by <a href="mailto:rwijs@ma-web.nl">Rens Wijs</a>.
+        2026 by <a href="mailto:40063@ma-web.nl">Rens Wijs</a>.
     </footer>
 </body>
 

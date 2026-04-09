@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>landingspage</title>
     <link rel="stylesheet" href="style.css">
-    <script src="filter.js" defer></script>
+    <script src="main.js" defer></script>
 </head>
 
 <body>
@@ -31,16 +31,15 @@
         </section>
     </article>
     <section class="product-section" href="html/products.html">
-        <div class="filters">
+        <filteritem class="filters">
+            <button onclick="filterProducten('alles')" class="filter-button">alles</button>
             <button onclick="filterProducten('Hoodies')" class="filter-button">Hoodies</button>
             <button onclick="filterProducten('T-Shirts')" class="filter-button">T-Shirts</button>
             <button onclick="filterProducten('Pants')" class="filter-button">Pants</button>
-            <button onclick="filterProducten('alles')" class="filter-button">alles</button>
-            <div action="">
-                <input type="text" id="zoek" name="zoek" placeholder="search"><br>
+            <div>
+                <input type="text" id="zoek" name="zoek" placeholder="search" class="search"><br>
             </div>
-
-        </div>
+        </filteritem>
         <ul class="product-list">
             <li class="product" data-categorie="Hoodies">
                 <div><img src="img/black-hoodie-print.jpg" alt="black hoodie with print" class="product-img">
@@ -70,5 +69,3 @@
 </body>
 
 </html>
-
-test

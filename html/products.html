@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>products</title>
     <link rel="stylesheet" href="../style.css">
+    <script src="../main.js" defer></script>
 </head>
 
 <body>
@@ -20,15 +21,92 @@
     <article class="product-front">
         <img src="../img\hero.png" alt="hero image" class="product-hero-img">
         <section class="product-hero">
-            <h1>Onze producten</h1>
-            <p>Hier vindt u een overzicht van onze nieuwste collectie kleding en accessoires. We hebben een breed scala
-                aan producten, van hoodies en T-shirts tot broeken en accessoires. Elk product is zorgvuldig
-                geselecteerd om ervoor te zorgen dat we alleen de beste kwaliteit aanbieden. Blader door onze collectie
-                en ontdek de perfecte items om uw stijl te verbeteren!</p>
+            <div class="product-hero-text">
+                <h1>Onze producten</h1>
+                <p>Hier vindt u een overzicht van onze nieuwste collectie kleding en accessoires. We hebben een breed
+                    scala
+                    aan producten, van hoodies en T-shirts tot broeken en accessoires. Elk product is zorgvuldig
+                    geselecteerd om ervoor te zorgen dat we alleen de beste kwaliteit aanbieden. Blader door onze
+                    collectie
+                    en ontdek de perfecte items om uw stijl te verbeteren!</p>
+            </div>
         </section>
     </article>
+    <section class="product-section">
+        <article class="filters">
+            <button onclick="filterProducten('alles')" class="filter-button">alles</button>
+            <button onclick="filterProducten('Hoodies')" class="filter-button">Hoodies</button>
+            <button onclick="filterProducten('T-Shirts')" class="filter-button">T-Shirts</button>
+            <button onclick="filterProducten('Pants')" class="filter-button">Pants</button>
+            <div>
+                <input type="text" id="zoek" name="zoek" placeholder="search" class="search"><br>
+            </div>
+        </article>
+        <ul class="product-list">
+            <li class="product" data-categorie="Hoodies" onclick="addToCard('Black Hoodie with Print', '29.99')">
+                <div>
+                    <img src="../img/black-hoodie-print.jpg" alt="Black Hoodie with Print" class="product-img">
+                    <h2 class="product-title">Black Hoodie with Print</h2>
+                </div>
+            </li>
+            <li class="product" data-categorie="Hoodies" onclick="addToCard('Black Hoodie', '39.99')">
+                <div>
+                    <img src="../img/black-hoodie.jpg" alt="Black Hoodie" class="product-img">
+                    <h2 class="product-title">Black Hoodie</h2>
+                </div>
+            </li>
+            <li class="product" data-categorie="Pants" onclick="addToCard('Black Pants', '24.99')">
+                <div>
+                    <img src="../img/black-pants.jpg" alt="Black Pants" class="product-img">
+                    <h2 class="product-title">Black Pants</h2>
+                </div>
+            </li>
+            <li class="product" data-categorie="T-Shirts" onclick="addToCard('Black T-Shirt', '19.99')">
+                <div>
+                    <img src="../img/black-T.jpg" alt="Black T-Shirt" class="product-img">
+                    <h2 class="product-title">Black T-Shirt</h2>
+                </div>
+            </li>
+            <li class="product" data-categorie="Pants" onclick="addToCard('Blue Pants', '29.99')">
+                <div>
+                    <img src="../img/blue-pants.jpg" alt="Blue Pants" class="product-img">
+                    <h2 class="product-title">Blue Pants</h2>
+                </div>
+            </li>
+            <li class="product" data-categorie="T-Shirts" onclick="addToCard('Brown T-Shirt', '24.99')">
+                <div>
+                    <img src="../img/brown-T.jpg" alt="Brown T-Shirt" class="product-img">
+                    <h2 class="product-title">Brown T-Shirt</h2>
+                </div>
+            </li>
+            <li class="product" data-categorie="Pants" onclick="addToCard('Cross Pants', '34.99')">
+                <div>
+                    <img src="../img/cross-pants.jpg" alt="Cross Pants" class="product-img">
+                    <h2 class="product-title">Cross Pants</h2>
+                </div>
+            </li>
+            <li class="product" data-categorie="Hoodies" onclick="addToCard('Gray Hoodie', '34.99')">
+                <div>
+                    <img src="../img/gray-hoodie.jpg" alt="Gray Hoodie" class="product-img">
+                    <h2 class="product-title">Gray Hoodie</h2>
+                </div>
+            </li>
+            <li class="product" data-categorie="Pants" onclick="addToCard('Gray Pants', '29.99')">
+                <div>
+                    <img src="../img/gray-pants.jpg" alt="Gray Pants" class="product-img">
+                    <h2 class="product-title">Gray Pants</h2>
+                </div>
+            </li>
+            <li class="product" data-categorie="T-Shirts" onclick="addToCard('White T-Shirt with Print', '24.99')">
+                <div>
+                    <img src="../img/white-T-print.jpg" alt="White T-Shirt with Print" class="product-img">
+                    <h2 class="product-title">White T-Shirt with Print</h2>
+                </div>
+            </li>
+        </ul>
+    </section>
     <footer>
-        2026 by <a href="mailto:rwijs@ma-web.nl">Rens Wijs</a>.
+        2026 by <a href="mailto:40063@ma-web.nl">Rens Wijs</a>.
     </footer>
 </body>
 

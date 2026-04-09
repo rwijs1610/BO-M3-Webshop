@@ -4,6 +4,13 @@
     margin: 0;
 }
 
+:root {
+    --primary-color: hsl(319, 9%, 36%);
+    --secondary-color: hsl(210, 10%, 60%);
+    --accent-color: hsl(0, 0%, 20%);
+    --text-color: hsl(0, 0%, 100%);
+}
+
 html {
     font-size: 10px;
 }
@@ -16,7 +23,7 @@ body {
 }
 
 .header {
-    background-color: #655560;
+    background-color: var(--primary-color);
     color: white;
     text-align: center;
     padding: 2rem;
@@ -33,25 +40,25 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333333;
+    background-color: var(--accent-color);
     height: 5rem;
 }
 
 .header-nav-button {
     float: left;
     display: block;
-    color: white;
+    color: var(--text-color);
     text-align: center;
     padding: 1.4rem 1.6rem;
     text-decoration: none;
 }
 
 .header-nav-button:hover {
-    background-color: #111111;
+    background-color: var(--accent-color);
 }
 
 .cta {
-    background-color: #C4CAD0;
+    background-color: var(--secondary-color);
     text-align: center;
     border-color: black;
     border-width: 0.2rem;
@@ -63,13 +70,13 @@ body {
 .cta-img {
     width: 100%;
     height: 100%;
-    filter: blur(5px);
+    filter: blur(0.5rem);
 }
 
 .cta-item {
     position: absolute;
     top: 0;
-    background-color: #655560;
+    background-color: var(--primary-color);
     border: 0.2rem solid black;
     padding: 2rem;
     height: 20rem;
@@ -86,22 +93,26 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333333;
+    background-color: var(--accent-color);
     height: 5rem;
-
+    border: none;
+    border-radius: 25px;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .cta-button a {
     float: left;
     display: block;
-    color: white;
+    color: var(--text-color);
     text-align: center;
     padding: 1.4rem 1.6rem;
     text-decoration: none;
 }
 
 .cta-button a:hover {
-    background-color: #111111;
+    background-color: var(--accent-color);
 }
 
 .cta-item-text {
@@ -109,11 +120,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.cta-item-img {
-    width: auto;
-    height: auto;
+    gap: 7.5px;
 }
 
 .product-section {
@@ -122,7 +129,7 @@ body {
     padding: 2rem;
     height: 20rem;
     width: 100%;
-    background-color: #C4CAD0;
+    background-color: var(--secondary-color);
     height: auto;
     grid-area: auto / 1 / auto / 5;
 }
@@ -139,6 +146,7 @@ body {
 
 .filters {
     display: flex;
+    justify-content: center;
     gap: 2rem;
     margin-bottom: 2rem;
     height: auto;
@@ -151,17 +159,34 @@ body {
     color: white;
     text-align: center;
     padding: 1.4rem 1.6rem;
+    border-radius: 25px;
+    border: none;
     text-decoration: none;
-    background-color: #333333;
+    background-color: var(--accent-color);
 }
 
 .filter-button:hover {
-    background-color: #111111;
+    background-color: var(--accent-color);
+}
+
+.filter-button:active {
+    background-color: var(--accent-color);
+}
+
+.filter-button.active {
+    background-color: var(--primary-color);
+}
+
+.search {
+    padding: 1.4rem 1.6rem;
+    border-radius: 25px;
+    border: 0.2rem solid black;
+    width: 100%;
 }
 
 .product {
     width: 100%;
-    background-color: #e0e4e7;
+    background-color: var(--secondary-color);
 }
 
 .product-img {
@@ -175,30 +200,141 @@ body {
     font-size: large;
 }
 
-/* pruduct page  */
+/* end landings page */
+/* begin product page  */
 
 .product-front {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto ;
-    gap: 2rem;
-    padding: 2rem;
-    height: auto;
-    width: 100%;
-    background-color: #C4CAD0;
+    background-color: var(--secondary-color);
+    text-align: center;
+    border-color: black;
+    border-width: 0.2rem;
+    border-style: solid;
     grid-area: auto / 1 / auto / 5;
 }
 
 .product-hero-img {
-    filter: blur(3px);
-    width: 100vw;
-    height: auto;
-}   
+    width: 100%;
+    height: 100%;
+    filter: blur(5px);
+}
 
+.product-hero {
+    position: absolute;
+    top: 0;
+    background-color: var(--primary-color);
+    border: 0.2rem solid black;
+    padding: 2rem;
+    height: 20rem;
+    width: 50%;
+    margin: 25%;
+    font-size: large;
+    display: flex;
+}
+
+.product-hero-text {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-list {
+    grid-template-columns: repeat(4, minmax(100px, 1fr));
+}
+
+/* end product page */
+/* begin card page */
+
+.card-main {
+    height: 65vh;
+    display: flex;
+    justify-content: center;
+    background-color: var(--secondary-color);
+    text-align: center;
+    gap: 2rem;
+    border-color: black;
+    border-width: 0.2rem;
+    border-style: solid;
+    grid-area: auto / 1 / auto / 5;
+
+}
+
+.cart-product {
+    width: 50%;
+    background-color: var(--secondary-color);
+    font-size: large;
+}
+
+table {
+    border: 4px solid black;
+}
+
+tbody {
+    border: 3px solid black;
+    /* background-color: hsl(0, 0%, 50%); */
+}
+
+.card-table-item {
+    text-align: left;
+}
+
+tr {
+    border: 3px solid black;
+}
+
+.card-btn {
+    position: relative;
+    top: 20px;
+    display: flex;
+    gap: 2rem;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: var(--accent-color);
+    height: 5rem;
+    width: 7.5rem;
+    border: none;
+    border-radius: 25px;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.add-btn {
+    padding: 0.2rem 1rem;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-btn:hover {
+    background-color: var(--primary-color);
+}
+
+.remove-btn {
+    padding: 0.2rem 1rem;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 0.5rem;
+}
+
+.remove-btn:hover {
+    background-color: var(--primary-color);
+}
 
 footer {
-    background-color: #655560;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--text-color);
     text-align: center;
     font-size: 1.4rem;
     padding: 1rem;
@@ -206,7 +342,7 @@ footer {
 }
 
 footer a {
-    color: white;
+    color: var(--text-color);
     text-decoration: underline;
 }
 
